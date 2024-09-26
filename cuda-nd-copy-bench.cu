@@ -134,7 +134,7 @@ int main(int argc, char **argv) {
     } else if (dims == 2) {
         printf(" chunk size   | source stride      | dest stride        | #chunks  | volume       | cudaMemcpy      | kernel          \n");
         printf("==============+====================+====================+==========+==============+=================+=================\n");
-        for (size_t chunk_size = 4; chunk_size <= 4096ull << 10; chunk_size *= 2) {
+        for (size_t chunk_size = 4; chunk_size <= 64ull << 10; chunk_size *= 2) {
             for (int whichStride = 1; whichStride <= 3; ++whichStride) {
                 if (whichStride != 1) {
                     printf("--------------+--------------------+--------------------+----------+--------------+-----------------+-----------------\n");
